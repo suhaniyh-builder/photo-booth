@@ -1,0 +1,194 @@
+* {
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+.final-page {
+  min-height: 100vh;
+
+  background-color: #fdfcf9;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 10px;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.final-logo {
+  margin-bottom: 10px;
+}
+
+.final-logo img {
+  width: 100px;
+  height: auto;
+
+  display: block;
+}
+
+
+/* =========================
+   FINAL PHOTO BOOTH
+
+   SAME SIZE AS CAMERA
+========================= */
+
+.final-booth {
+  position: relative;
+
+  width: 445px;
+  height: 592px;
+
+  overflow: hidden;
+}
+
+
+/* =========================
+   PHOTO SLOTS
+
+   SAME POSITIONS AS CAMERA
+========================= */
+
+.final-slot {
+  position: absolute;
+
+  left: 12.5%;
+  width: 75%;
+
+  overflow: hidden;
+
+  z-index: 1;
+}
+
+
+/* =========================
+   TOP PHOTO
+========================= */
+
+.final-slot-top {
+  top: 5%;
+  height: 35%;
+}
+
+
+/* =========================
+   BOTTOM PHOTO
+========================= */
+
+.final-slot-bottom {
+  top: 40.5%;
+  height: 35.5%;
+}
+
+
+/* =========================
+   PHOTOS
+========================= */
+
+.final-slot img {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  object-fit: cover;
+  object-position: center center;
+
+  /* Keep final photos mirrored like the camera */
+  transform: scaleX(-1);
+}
+
+
+/* =========================
+   FRAME
+========================= */
+
+.final-frame {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: fill;
+
+  z-index: 2;
+
+  pointer-events: none;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.final-buttons {
+  display: flex;
+
+  gap: 15px;
+
+  margin-top: 15px;
+}
+
+.final-buttons button {
+  width: 120px;
+  height: 45px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #555555;
+  border-radius: 10px;
+
+  font-family: Georgia, serif;
+  font-size: 18px;
+
+  color: #333333;
+
+  cursor: pointer;
+
+  transition: transform 0.2s ease;
+}
+
+.final-buttons button:hover {
+  transform: scale(1.03);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .final-page {
+    padding-top: 10px;
+  }
+
+  .final-logo img {
+    width: 85px;
+  }
+
+  .final-booth {
+    width: 90vw;
+    height: auto;
+
+    aspect-ratio: 445 / 592;
+
+    max-width: 445px;
+  }
+
+  .final-buttons button {
+    width: 110px;
+    height: 42px;
+  }
+}
