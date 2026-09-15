@@ -1,5 +1,4 @@
 
-````md
 # Photo Booth App
 
 A simple React + TypeScript photo booth application using the user's webcam to capture two photos, place them inside a frame, and download the final photo strip.
