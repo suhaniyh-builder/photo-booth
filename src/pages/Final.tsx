@@ -185,6 +185,10 @@ const Final = () => {
           Home
         </button>
 
+        <button onClick={() => navigate("/camera")}>
+         Retake
+        </button>
+
       </div>
 
     </div>
